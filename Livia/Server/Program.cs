@@ -1,12 +1,14 @@
-using Microsoft.AspNetCore.ResponseCompression;
+using Livia.Ioc;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
 
+// Register services from the ioc container
+builder.Services.AddServicesLayer();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -27,7 +29,6 @@ app.UseBlazorFrameworkFiles();
 app.UseStaticFiles();
 
 app.UseRouting();
-
 
 app.MapRazorPages();
 app.MapControllers();

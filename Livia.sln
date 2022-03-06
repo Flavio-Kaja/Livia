@@ -3,11 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livia.Server", "Livia\Server\Livia.Server.csproj", "{F2A6D969-D435-47CF-AED7-C43400C020A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Livia.Server", "Livia\Server\Livia.Server.csproj", "{F2A6D969-D435-47CF-AED7-C43400C020A5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livia.Client", "Livia\Client\Livia.Client.csproj", "{89C46893-7C0C-4E56-B9EC-CE2A54750FEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Livia.Client", "Livia\Client\Livia.Client.csproj", "{89C46893-7C0C-4E56-B9EC-CE2A54750FEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livia.Shared", "Livia\Shared\Livia.Shared.csproj", "{5FF26184-D02D-4704-9D20-E643F223C6E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Livia.Shared", "Livia\Shared\Livia.Shared.csproj", "{5FF26184-D02D-4704-9D20-E643F223C6E9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Livia.Data", "Livia.Data\Livia.Data.csproj", "{67BFF966-B175-46A1-9898-329E084CCB6D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Livia.Domain", "Livia.Domain\Livia.Domain.csproj", "{110C6636-60B3-414C-8CCE-BF65F75922AC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Livia.Application", "Livia.Application\Livia.Application.csproj", "{0E9FF791-65BE-45A5-9C28-768ABCB1D5F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Livia.Ioc", "Livia.Ioc\Livia.Ioc.csproj", "{544B0752-B982-4DE8-9BB9-5FD89E2A7CFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +35,22 @@ Global
 		{5FF26184-D02D-4704-9D20-E643F223C6E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FF26184-D02D-4704-9D20-E643F223C6E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FF26184-D02D-4704-9D20-E643F223C6E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67BFF966-B175-46A1-9898-329E084CCB6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67BFF966-B175-46A1-9898-329E084CCB6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67BFF966-B175-46A1-9898-329E084CCB6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67BFF966-B175-46A1-9898-329E084CCB6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{110C6636-60B3-414C-8CCE-BF65F75922AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{110C6636-60B3-414C-8CCE-BF65F75922AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{110C6636-60B3-414C-8CCE-BF65F75922AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{110C6636-60B3-414C-8CCE-BF65F75922AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E9FF791-65BE-45A5-9C28-768ABCB1D5F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E9FF791-65BE-45A5-9C28-768ABCB1D5F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E9FF791-65BE-45A5-9C28-768ABCB1D5F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E9FF791-65BE-45A5-9C28-768ABCB1D5F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{544B0752-B982-4DE8-9BB9-5FD89E2A7CFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{544B0752-B982-4DE8-9BB9-5FD89E2A7CFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{544B0752-B982-4DE8-9BB9-5FD89E2A7CFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{544B0752-B982-4DE8-9BB9-5FD89E2A7CFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
