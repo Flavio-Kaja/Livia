@@ -1,4 +1,5 @@
-﻿using Livia.Domain.Models.Base;
+﻿using Livia.Data.Mappings;
+using Livia.Domain.Models.Base;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 
@@ -45,8 +46,27 @@ namespace Livia.Data.Context
         #region Utilities
 
         /// <inheritdoc cref="DbContext"/>
+
+        /// <inheritdoc cref="DbContext"/>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            //dynamically load all entity and query type configurations
+            var assemblies = AppDomain.CurrentDomain.GetAssemblies();
+            var typeConfigurations = assemblies.SelectMany(a => a.GetTypes()).Where(type =>
+                (type.BaseType?.IsGenericType ?? false)
+                && type.BaseType.GetGenericTypeDefinition() == typeof(BaseEntityTypeConfiguration<>));
+
+            var mapList = new List<IMappingConfiguration?>();
+            foreach (var typeConfiguration in typeConfigurations)
+            {
+                var configuration = Activator.CreateInstance(typeConfiguration) as IMappingConfiguration;
+                mapList.Add(configuration);
+            }
+            foreach (var map in mapList.OrderBy(l => l?.Order))
+            {
+                map?.ApplyConfiguration(modelBuilder);
+            }
+
             base.OnModelCreating(modelBuilder);
         }
 

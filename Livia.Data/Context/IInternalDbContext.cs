@@ -1,6 +1,6 @@
 ﻿namespace Livia.Data.Context
 {
-    internal interface IInternalDbContext : IDbContext
+    public interface IInternalDbContext : IDbContext
     {
     }
 }

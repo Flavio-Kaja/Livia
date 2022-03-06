@@ -20,8 +20,15 @@ namespace Livia.Data.Mappings.Task
             builder.MapDefaults(Schema.Tasks);
 
             builder.Property(mapping => mapping.Title).IsRequired().HasMaxLength(50);
-            builder.Property(mapping => mapping.Description).HasMaxLength(200);
+            builder.Property(mapping => mapping.Description).IsRequired(false).HasMaxLength(200);
+            builder.Property(mapping => mapping.Deadline).IsRequired(false);
+
+            //configure relationships
             builder.MapAuditableEntity();
+
+            builder.HasOne(mapping => mapping.Category)
+                .WithMany(category => category.Tasks)
+                .HasForeignKey(mapping => mapping.CategoryId);
 
             base.Configure(builder);
         }
