@@ -10,7 +10,8 @@ namespace Livia.Data.Mappings.Task
         public override void Configure(EntityTypeBuilder<Category> builder)
         {
             builder.Property(mapping => mapping.Title).IsRequired().HasMaxLength(100);
-            builder.Property(mapping => mapping.De)
+            builder.Property(mapping => mapping.Description).HasMaxLength(500);
+            builder.MapAuditableEntity();
             base.Configure(builder);
         }
 
