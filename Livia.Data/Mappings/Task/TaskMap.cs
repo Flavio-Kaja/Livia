@@ -1,12 +1,5 @@
-﻿using FluentValidation;
-using Livia.Data.Mappings.Schemas;
-using Livia.Domain.Models.Task;
+﻿using Livia.Data.Mappings.Schemas;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Livia.Data.Mappings.Task
 {
@@ -29,6 +22,9 @@ namespace Livia.Data.Mappings.Task
             builder.HasOne(mapping => mapping.Category)
                 .WithMany(category => category.Tasks)
                 .HasForeignKey(mapping => mapping.CategoryId);
+
+            builder.HasMany(mapping => mapping.Tags)
+                .WithMany(tag => tag.Tasks);
 
             base.Configure(builder);
         }

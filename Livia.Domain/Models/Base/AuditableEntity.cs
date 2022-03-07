@@ -16,7 +16,7 @@ namespace Livia.Domain.Models.Base
         public Guid? CreatedById { get; set; }
 
         /// <inheritdoc />
-        public virtual Person CreatedBy { get; set; } = new Person();
+        public virtual Person CreatedBy { get; set; } = default!;
 
         /// <inheritdoc />
         public DateTime? UpdatedOnUtc { get; set; }

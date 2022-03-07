@@ -10,6 +10,6 @@ namespace Livia.Domain.Models.Base
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int Id { get; set; }
+        public virtual int Id { get; set; }
     }
 }

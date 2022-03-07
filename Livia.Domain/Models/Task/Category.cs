@@ -5,6 +5,7 @@ namespace Livia.Domain.Models.Task
     public class Category : AuditableEntity
     {
         public string Title { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
 
         #region Referrential
 
