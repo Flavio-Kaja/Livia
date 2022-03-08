@@ -8,12 +8,12 @@
 
   <ItemGroup>
     <Folder Include="Extensions\" />
-    <Folder Include="ViewModels\" />
-    <Folder Include="Services\" />
+    <Folder Include="Services\Communication\" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Livia.Data\Livia.Data.csproj" />
+    <ProjectReference Include="..\Livia.Ioc\Livia.Ioc.csproj" />
   </ItemGroup>
 
 </Project>
