@@ -21,7 +21,7 @@ namespace Livia.Data.Mappings.Task
 
             builder.HasOne(mapping => mapping.Category)
                 .WithMany(category => category.Tasks)
-                .HasForeignKey(mapping => mapping.CategoryId);
+                .HasForeignKey(mapping => mapping.CategoryId).IsRequired(true);
 
             builder.HasMany(mapping => mapping.Tags)
                 .WithMany(tag => tag.Tasks);

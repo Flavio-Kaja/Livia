@@ -10,6 +10,8 @@ namespace Livia.Ioc
         public static IServiceCollection AddServicesLayer(this IServiceCollection services)
         {
             services.AddHttpContextAccessor();
+            services.AddMemoryCache();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             return services;
         }
     }
