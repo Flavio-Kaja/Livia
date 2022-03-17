@@ -28,6 +28,5 @@ namespace Livia.Data.Mappings.Task
 
             base.Configure(builder);
         }
-
     }
 }
